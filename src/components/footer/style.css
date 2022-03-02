@@ -1,0 +1,91 @@
+.footer {
+  display: flex;
+  width: 100%;
+  background: rgb(248, 248, 248);
+  justify-content: center;
+}
+
+.footer1 {
+  max-width: 110rem;
+  width: 110rem;
+  padding: 4.8rem 0px 2.2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .footer1 {
+    padding: 4.8rem 1rem 14.2rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .footer1 {
+    padding: 0px 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .footer1 {
+    padding: 4.8rem 2.4rem 2.2rem;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .logo > img {
+    height: 2.8rem;
+    width: 13.2rem;
+    font-size: 16px;
+  }
+}
+
+.logo > img {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  .logo > img {
+    margin-bottom: 3rem;
+  }
+}
+
+.dropdown .css-1t838gv-MuiFormControl-root {
+  margin-left: 0px;
+}
+
+.InfoContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.formClass {
+  font-size: 16px;
+}
+
+.InfoContainer .heading {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  margin: 0px 0px 1.2rem;
+}
+
+.InfoContainer .subheading {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: rgb(105, 105, 105);
+  margin: 0.5rem 0px;
+  cursor: pointer;
+}

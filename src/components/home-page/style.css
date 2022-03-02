@@ -1,0 +1,61 @@
+.topBannerContainer {
+  position: relative;
+  min-height: 42rem;
+  max-height: 57rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .topBannerContainer {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.topBannerContainer > img {
+  position: absolute;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.logoContainer {
+  /* position: absolute;
+  bottom: calc(50% - 11.1rem); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* top: 0; */
+}
+
+@media screen and (max-width: 480px) {
+  .logoContainer {
+    bottom: 2rem;
+  }
+}
+
+.logoContainer > img {
+  height: 6rem;
+  max-height: none;
+  width: 30rem;
+  position: relative;
+}
+
+.logoContainer .heading {
+  margin: 3rem 0px 0px;
+  line-height: 1.2;
+  font-size: 3.6rem;
+  color: white;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 480px) {
+  .logoContainer .heading {
+    margin-top: 2rem;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
