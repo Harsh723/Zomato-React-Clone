@@ -1,7 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import SimpleBackdrop from "../login-signup/backdrop";
-import CommonLogin from "../login-signup/CommonLogin";
+//import CommonLogin from "../login-signup/CommonLogin";
 import "./style.css";
+
+const CommonLogin = React.lazy(() => import("../login-signup/CommonLogin"));
 
 function Header() {
   return (
@@ -10,7 +12,9 @@ function Header() {
         <SimpleBackdrop />
       </div>
       <div className="largeScreen">
-        <CommonLogin display={false} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <CommonLogin display={false} onClick={() => {}} />
+        </Suspense>
       </div>
     </div>
   );

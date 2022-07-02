@@ -4,6 +4,7 @@ import {
   HOME_PAGE_TOP_BANNER,
 } from "../../constants/img-constants";
 import Header from "../header/header";
+import SearchBar from "../search-bar/SearchBar";
 import "./style.css";
 
 const HomePage = () => (
@@ -26,7 +27,6 @@ const TopBanner = ({ a, b, ...props }: any) => {
         width="100%"
         height="100%"
         alt="home-page-top-banner"
-        loading="eager"
       />
       <Header />
       <div className="logoContainer">
@@ -40,6 +40,7 @@ const TopBanner = ({ a, b, ...props }: any) => {
         />
         <h1 className="heading">{heading}</h1>
       </div>
+      <SearchBar />
     </div>
   );
 };

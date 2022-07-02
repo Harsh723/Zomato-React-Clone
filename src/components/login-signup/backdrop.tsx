@@ -47,7 +47,7 @@ export default function SimpleBackdrop() {
               />
             </a>
           </div>
-          <CommonLogin display />
+          <CommonLogin display onClick={handleToggle} />
         </div>
       </Backdrop>
     </div>

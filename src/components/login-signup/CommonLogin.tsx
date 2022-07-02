@@ -8,10 +8,16 @@ type LoginSignUp = {
   signUp: boolean;
 };
 
-const CommonLogin = ({ display }: { display: boolean }) => {
+type CommonLoginType = {
+  display: boolean;
+  onClick: () => void;
+};
+
+const CommonLogin = ({ display, onClick }: CommonLoginType) => {
   const [modalShow, setModalShow] = useState<LoginSignUp>({} as LoginSignUp);
 
   const handleLoginSignup = (value: string) => {
+    if (display) onClick();
     if (value === "Login") {
       setModalShow({ login: true, signUp: false });
     } else {

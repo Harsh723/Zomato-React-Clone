@@ -1,10 +1,9 @@
-import { Button } from "@mui/material";
 import React from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/footer/footer";
+import OgMetaData from "./components/helmet/OgMetaData";
 import HomePage from "./components/home-page/HomePage";
-import SimpleBackdrop from "./components/login-signup/backdrop";
 
 function App() {
   return (
@@ -13,6 +12,7 @@ function App() {
         <Route element={<Hello />}>
           <Route path="/" element={<HomePage />} />
         </Route>
+        <Route path="location" element={<div>loading.....</div>} />
       </Routes>
     </div>
   );
@@ -21,6 +21,10 @@ function App() {
 function Hello() {
   return (
     <div>
+      <OgMetaData
+        title="Zomato-Clone"
+        description="A one go place to order food online"
+      />
       <Outlet />
       <Footer />
     </div>
