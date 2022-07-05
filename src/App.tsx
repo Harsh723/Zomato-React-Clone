@@ -7,7 +7,7 @@ import HomePage from "./components/home-page/HomePage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="globalStyle">
       <Routes>
         <Route element={<Hello />}>
           <Route path="/" element={<HomePage />} />

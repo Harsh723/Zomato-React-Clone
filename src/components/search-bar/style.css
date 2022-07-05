@@ -23,9 +23,11 @@
 }
 
 .search {
+  position: relative;
   margin: auto;
   width: 25%;
   margin-top: 3rem;
+  z-index: 1;
 }
 
 .search > div > div > div > fieldset {

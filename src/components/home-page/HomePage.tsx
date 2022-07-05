@@ -2,14 +2,32 @@ import React from "react";
 import {
   HOME_PAGE_LOGO,
   HOME_PAGE_TOP_BANNER,
+  HOME_PAGE_GO_OUT_FOR_A_MEAL,
+  HOME_PAGE_NIGHT_LIFE,
+  HOME_PAGE_ORDER_FOOD_ONLINE,
+  HOME_PAGE_ZOMATO_PRO,
 } from "../../constants/img-constants";
 import Header from "../header/header";
 import SearchBar from "../search-bar/SearchBar";
+import StaticImages from "./StaticImages";
 import "./style.css";
+
+const data = [
+  HOME_PAGE_GO_OUT_FOR_A_MEAL,
+  HOME_PAGE_NIGHT_LIFE,
+  HOME_PAGE_ORDER_FOOD_ONLINE,
+  HOME_PAGE_ZOMATO_PRO,
+];
 
 const HomePage = () => (
   <>
     <TopBanner a="harsh" b={12} c d={12345} />
+    <StaticImages
+      orderOnline={data[2]}
+      outForAMeal={data[0]}
+      zomatoPro={data[3]}
+      nightLife={data[1]}
+    />
   </>
 );
 
@@ -19,7 +37,7 @@ const TopBanner = ({ a, b, ...props }: any) => {
 
   return (
     <div className="topBannerContainer">
-      <link rel="preload" href={HOME_PAGE_TOP_BANNER} as="image" />
+      {/* <link rel="preload" href={HOME_PAGE_TOP_BANNER} as="image" /> */}
       {/* Add loading="lazy" only to images which are positioned below the fold. */}
       <img
         src={HOME_PAGE_TOP_BANNER}
@@ -27,6 +45,7 @@ const TopBanner = ({ a, b, ...props }: any) => {
         width="100%"
         height="100%"
         alt="home-page-top-banner"
+        loading="eager"
       />
       <Header />
       <div className="logoContainer">
