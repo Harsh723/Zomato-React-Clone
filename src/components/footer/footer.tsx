@@ -2,7 +2,7 @@ import React from "react";
 import {
   countries,
   footerImage,
-  language,
+  language
 } from "../../constants/img-constants";
 import CommonDropdown from "./lang-country";
 import "./style.css";
@@ -22,12 +22,12 @@ const Logo = () => {
   return (
     <div className="logo">
       <img
-        src={footerImage}
-        data-src={footerImage}
-        height="100%"
-        alt="Zomato Footer"
-        loading="lazy"
-        width="15%"
+          src={footerImage}
+          data-src={footerImage}
+          height="100%"
+          alt="Zomato Footer"
+          loading="lazy"
+          width="15%"
       />
       <div className="dropdown">
         <CommonDropdown title="India" value={countries} />
@@ -71,25 +71,25 @@ const InfoArray: InforArray[] = [
       "Careers",
       "Report Fraud",
       "Contact",
-      "Investor Relation",
-    ],
+      "Investor Relation"
+    ]
   },
   {
     heading: "FOR FOODIES",
-    subHeading: ["Code of Conduct", "Community", "Blogger Help", "Mobile Apps"],
+    subHeading: ["Code of Conduct", "Community", "Blogger Help", "Mobile Apps"]
   },
   {
     heading: "FOR RESTAURANTS",
-    subHeading: ["Add Restaurants"],
+    subHeading: ["Add Restaurants"]
   },
   {
     heading: "FOR ENTERPRISES",
-    subHeading: ["Zomato for Work"],
+    subHeading: ["Zomato for Work"]
   },
   {
     heading: "FOR YOU",
-    subHeading: ["Privacy", "Terms", "Security", "Sitemap"],
-  },
+    subHeading: ["Privacy", "Terms", "Security", "Sitemap"]
+  }
 ];
 
 const Info = () => (

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { AxiosResponse } from "axios";
 import { LocationsRoot } from "../module/interface/location-interface";
 import { commonHeader } from "./api-call";
@@ -49,7 +50,7 @@ export const countries = [
   "Turkey",
   "UAE",
   "United Kingdom",
-  "USA",
+  "USA"
 ];
 
 export const language = [
@@ -63,7 +64,7 @@ export const language = [
   "Slovenčina",
   "Polish",
   "Italian",
-  "Vietnamese",
+  "Vietnamese"
 ];
 
 export const getLocationSuggestions = (locationName: string) => {
