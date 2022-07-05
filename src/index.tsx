@@ -1,22 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
-import theme from "./theme";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { SnackbarProvider } from "notistack";
-//import "bootstrap/dist/css/bootstrap.min.css";
+import theme from "./theme";
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      refetchOnWindowFocus: false,
-    },
-  },
+      refetchOnWindowFocus: false
+    }
+  }
 });
 
 ReactDOM.render(
@@ -24,9 +23,9 @@ ReactDOM.render(
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <SnackbarProvider
-          anchorOrigin={{
+            anchorOrigin={{
             vertical: "bottom",
-            horizontal: "right",
+            horizontal: "right"
           }}
         >
           <QueryClientProvider client={queryClient}>

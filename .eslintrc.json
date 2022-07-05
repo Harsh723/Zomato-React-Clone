@@ -11,7 +11,7 @@
     },
     "ecmaVersion": "latest"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "indent": "off",
     "quotes": ["warn", "double"],
@@ -71,11 +71,7 @@
     "react/function-component-definition": [
       0,
       {
-        "namedComponents": [
-          "function-declaration",
-          "function-expression",
-          "arrow-function"
-        ],
+        "namedComponents": ["function-declaration", "function-expression", "arrow-function"],
         "unnamedComponents": ["function-expression", "arrow-function"]
       }
     ]
